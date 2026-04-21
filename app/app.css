@@ -298,9 +298,9 @@
     }
   }
   .mobile-sidebar {
-    @apply lg:hidden flex flex-col gap-5;
+    @apply lg:hidden flex justify-center flex-col gap-5;
     header {
-      @apply flex justify-between items-center border-b border-light-100;
+      @apply flex items-center border-b border-light-100;
       h1 {
         @apply text-base md:text-2xl font-bold text-dark-100;
       }
