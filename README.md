@@ -22,6 +22,7 @@ Install the dependencies:
 
 ```bash
 npm install
+npm install dayjs , clsx , tailwind-merge
 ```
 
 ### Development
