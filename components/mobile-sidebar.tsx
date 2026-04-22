@@ -1,47 +1,47 @@
 // @ts-nocheck
-import { useRef } from "react";
-import pkg from "@syncfusion/ej2-react-navigations";
+import { useState } from "react";
 import { Link } from "react-router";
 import NavItems from "./navItems";
-const { SidebarComponent } = pkg;
+
 
 const MobileSidebar = () => {
-    const sidebar = useRef(null);
-    const toggleSidebar = () => {
-        sidebar.current?.toggle();
-    }
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
-    <div className = "mobile-sidebar wrapper">
-        <header className = "flex items-center">
-            <Link to = "/" className = "flex items-center gap-2">
-                <img src = "/assets/icons/logo.svg" alt = "Logo" className = "size-[30px]"/>
-                <h1>
-                Tourizzm
-                </h1>
-            </Link>
+    <div>
+        <div className={sidebarOpen
+            ? 'bg-white w-64 fixed h-screen shadow transition-transform duration-300 translate-x-0'
+            : 'bg-white w-64 fixed h-screen shadow transition-transform duration-300 -translate-x-64'}>
 
-            <button onClick={toggleSidebar} className = "ml-auto">
-                <img
-                    src = "/assets/icons/menu.svg"
-                    alt = "Menu"   
-                    className = "size-7"
-                />
-            </button>  
-        
-        </header>  
+        </div>
+        <div className = "md:hidden">
+            <header className = "flex bg-white justify-between p-4">
+                {/* <Link to = "/" className = "flex items-center gap-2">
+                    <img src = "/assets/icons/logo.svg" alt = "Logo" className = "size-[30px]"/>
+                    <h1 className = "text-2xl font-bold">
+                    Tourizzm
+                    </h1>
+                </Link> */}
+                <div className = "flex items-center gap-2">
+                    <img src = "/assets/icons/logo.svg" alt = "Logo" className = "size-[30px]"/>
+                    <h1 className = 'text-2xl font-bold'>Tourizzm</h1>
+                </div>
 
-        <SidebarComponent
-            width={270}
-            ref={(Sidebar) => sidebar.current  = Sidebar}
-            created={() => {
-                if (sidebar.current) sidebar.current.hide();
-            }}
-            closeOnDocumentClick={true}
-            showBackdrop={true} 
-            type = "over"    
-        >
-            <NavItems handleClick={toggleSidebar}/>
-        </SidebarComponent>
+                <button 
+                    className = "p-2 text-xl font-bold cursor-pointer hover:bg-gray-100 rounded transition-colors"
+                    onClick = {() => {
+                        setSidebarOpen(!sidebarOpen);
+                    }}
+                >
+                    sidebar
+                    {/* <img
+                        src = "/assets/icons/menu.svg"
+                        alt = "Menu"   
+                        className = "size-7"
+                    /> */}
+                </button>  
+            
+            </header>  
+        </div>
     </div>
   );
 };

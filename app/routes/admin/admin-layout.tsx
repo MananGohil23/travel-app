@@ -8,7 +8,7 @@ const AdminLayout = () => {
         <MobileSidebar/>
 
 
-      <aside className = "w-full max-w-[270px] hidden lg:block">
+      <aside className = "w-full max-w-[270px] hidden md:block">
         <SidebarComponent width = "270px" enableGestures={false}>
             <NavItems/>
         </SidebarComponent>
