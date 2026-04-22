@@ -19,10 +19,13 @@
     "@syncfusion/ej2-react-maps": "^33.1.44",
     "@syncfusion/ej2-react-navigations": "^33.1.49",
     "@syncfusion/ej2-react-splitbuttons": "^33.1.49",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.20",
     "isbot": "^5.1.36",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-router": "7.14.0"
+    "react-router": "7.14.0",
+    "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
     "@react-router/dev": "7.14.0",

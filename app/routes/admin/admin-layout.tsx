@@ -2,7 +2,7 @@ import { Outlet } from "react-router"
 import pkg from "@syncfusion/ej2-react-navigations";
 import { MobileSidebar , NavItems} from "../../../components";
 const { SidebarComponent } = pkg;
-const adminLayout = () => {
+const AdminLayout = () => {
   return (
     <div className = "admin-layout">
         <MobileSidebar/>
@@ -24,4 +24,4 @@ const adminLayout = () => {
   )
 }
 
-export default adminLayout
+export default AdminLayout

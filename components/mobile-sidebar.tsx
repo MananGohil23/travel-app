@@ -2,10 +2,10 @@
 import { useRef } from "react";
 import pkg from "@syncfusion/ej2-react-navigations";
 import { Link } from "react-router";
-import {NavItems} from "./components";
+import NavItems from "./navItems";
 const { SidebarComponent } = pkg;
 
-const mobileSidebar = () => {
+const MobileSidebar = () => {
     const sidebar = useRef(null);
     const toggleSidebar = () => {
         sidebar.current?.toggle();
@@ -14,7 +14,7 @@ const mobileSidebar = () => {
     <div className = "mobile-sidebar wrapper">
         <header className = "flex items-center">
             <Link to = "/" className = "flex items-center gap-2">
-                <img src = "public/assets/icons/logo.svg" alt = "Logo" className = "size-[30px]"/>
+                <img src = "/assets/icons/logo.svg" alt = "Logo" className = "size-[30px]"/>
                 <h1>
                 Tourizzm
                 </h1>
@@ -22,7 +22,7 @@ const mobileSidebar = () => {
 
             <button onClick={toggleSidebar} className = "ml-auto">
                 <img
-                    src = "public/assets/icons/menu.svg"
+                    src = "/assets/icons/menu.svg"
                     alt = "Menu"   
                     className = "size-7"
                 />
@@ -46,4 +46,4 @@ const mobileSidebar = () => {
   );
 };
 
-export default mobileSidebar
+export default MobileSidebar
